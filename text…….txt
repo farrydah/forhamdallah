@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Hamdallah 💙</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Georgia', serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+        color: #333;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        animation: fadeIn 1s ease-in;
+    }
+
+    .header h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .header p {
+        font-size: 1.2em;
+        opacity: 0.9;
+    }
+
+    .card {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        animation: slideUp 0.8s ease-out;
+    }
+
+    .memory-section h2 {
+        color: #667eea;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    .memory-card {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .memory-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+    .memory-date {
+        font-weight: bold;
+        color: #764ba2;
+        margin-bottom: 8px;
+        font-size: 0.9em;
+    }
+
+    .memory-text {
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .letter-section {
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    }
+
+    .letter-section h2 {
+        color: #764ba2;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    .letter-text {
+        line-height: 1.8;
+        color: #444;
+        font-size: 1.1em;
+        white-space: pre-line;
+    }
+
+    .secret-button {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.1em;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-top: 20px;
+        font-weight: bold;
+        box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+    }
+
+    .secret-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 7px 20px rgba(245, 87, 108, 0.6);
+    }
+
+    .hidden-surprise {
+        display: none;
+        text-align: center;
+        padding: 40px;
+        animation: fadeIn 1s ease-in;
+    }
+
+    .hidden-surprise h2 {
+        color: #667eea;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .hidden-surprise p {
+        font-size: 1.3em;
+        color: #555;
+        line-height: 1.8;
+    }
+
+    /* Confetti styles */
+    .confetti {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        background: #f0f;
+        position: absolute;
+        animation: confetti-fall 3s linear infinite;
+    }
+
+    @keyframes confetti-fall {
+        to {
+            transform: translateY(100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .memory-emoji {
+        font-size: 1.5em;
+        margin-right: 10px;
+    }
+
+    .click-hint {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+        font-size: 0.9em;
+        opacity: 0.8;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 0.8;
+        }
+        50% {
+            opacity: 0.4;
+        }
+    }
+
+    .memory-counter {
+        background: #764ba2;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>To Hamdallah 💙</h1>
+            <p>A collection of memories, moments, and magic</p>
+        </div>
+
+```
+    <div class="card memory-section">
+        <h2>✨ Our Daily Memories</h2>
+        <div class="memory-counter">7 unforgettable moments</div>
+        
+        <div class="memory-card" onclick="toggleMemory(this)">
+            <div class="memory-date"><span class="memory-emoji">🎉</span>The Day We Met</div>
+            <div class="memory-text">I still remember the first time we met. Your laugh was contagious, and I knew right away we'd be great friends. Little did I know you'd become my absolute best friend!</div>
+        </div>
+
+        <div class="memory-card" onclick="toggleMemory(this)">
+            <div class="memory-date"><span class="memory-emoji">🍕</span>Late Night Adventures</div>
+            <div class="memory-text">Those spontaneous midnight food runs? Best decision-making ever. Pizza at 2 AM just hits different when you're with your favorite person.</div>
+        </div>
+
+        <div class="memory-card" onclick="toggleMemory(this)">
+            <div class="memory-date"><span class="memory-emoji">😂</span>Inside Jokes Galore</div>
+            <div class="memory-text">We have so many inside jokes that nobody else understands. One look and we're both cracking up. That's the kind of connection you can't fake!</div>
+        </div>
+
+        <div class="memory-card" onclick="toggleMemory(this)">
+            <div class="memory-date"><span class="memory-emoji">🎬</span>Movie Marathon Madness</div>
+            <div class="memory-text">Remember binging entire series in one weekend? Surrounded by snacks, barely moving from the couch. Those were some of the best lazy days ever.</div>
+        </div>
+
+        <div class="memory-card" onclick="toggleMemory(this)">
+            <div class="memory-date"><span class="memory-emoji">💪</span>Being There Through It All</div>
+            <div class="memory-text">Thank you for being there during the tough times. Your support means everything. You've seen me at my worst and still chose to stick around - that's real friendship.</div>
+        </div>
+
+        <div class="memory-card" onclick="toggleMemory(this)">
+            <div class="memory-date"><span class="memory-emoji">🎵</span>Road Trip Sing-Alongs</div>
+            <div class="memory-text">Our car karaoke sessions are legendary! Terrible singing, amazing memories. The journey is always better when you're the co-pilot.</div>
+        </div>
+
+        <div class="memory-card" onclick="toggleMemory(this)">
+            <div class="memory-date"><span class="memory-emoji">🌟</span>Just Being Us</div>
+            <div class="memory-text">Sometimes the best memories are just sitting together in comfortable silence or talking about everything and nothing. With you, every moment is special.</div>
+        </div>
+
+        <p class="click-hint">💡 Click on each memory to see it glow!</p>
+    </div>
+
+    <div class="card letter-section">
+        <h2>💌 A Letter Just For You</h2>
+        <div class="letter-text">Dear Hamdallah,
+```
+
+I don’t say it enough, but you mean the world to me. Thank you for being the kind of friend who understands me without words, who makes ordinary days extraordinary, and who’s always there when I need you.
+
+You’ve been my partner in crime, my shoulder to cry on, my biggest cheerleader, and the person who makes me laugh until my stomach hurts. Our friendship is one of the greatest gifts life has given me.
+
+Thank you for accepting me exactly as I am - flaws, quirks, and all. Thank you for the memories we’ve made and for all the adventures yet to come. Thank you for being YOU.
+
+Here’s to many more years of friendship, laughter, and unforgettable moments together!
+
+With all my love and appreciation,
+Your Best Friend Forever 💙</div>
+</div>
+
+```
+    <div class="card" style="text-align: center;">
+        <h2 style="color: #764ba2; margin-bottom: 20px;">🎁 One More Thing...</h2>
+        <p style="color: #666; margin-bottom: 20px;">There's a special surprise waiting for you!</p>
+        <button class="secret-button" onclick="revealSurprise()">Click Here For Your Surprise! 🎉</button>
+        
+        <div id="surprise" class="hidden-surprise">
+            <h2>🎊 SURPRISE, HAMDALLAH! 🎊</h2>
+            <p>You are AMAZING! 🌟<br><br>
+            Never forget how special you are and how much you mean to me.<br>
+            You light up every room you walk into!<br><br>
+            This website is just a tiny reminder of how awesome our friendship is.<br><br>
+            Love you to the moon and back! 🚀💙</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleMemory(element) {
+        // Add a glow effect when clicked
+        element.style.boxShadow = '0 0 20px rgba(255, 215, 0, 0.8)';
+        element.style.transform = 'scale(1.02)';
+        
+        setTimeout(() => {
+            element.style.boxShadow = '';
+            element.style.transform = '';
+        }, 500);
+    }
+
+    function revealSurprise() {
+        const surprise = document.getElementById('surprise');
+        surprise.style.display = 'block';
+        
+        // Trigger confetti
+        createConfetti();
+        
+        // Scroll to surprise
+        surprise.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function createConfetti() {
+        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ff6b6b', '#4ecdc4', '#45b7d1', '#f9ca24'];
+        const confettiCount = 150;
+        
+        for (let i = 0; i < confettiCount; i++) {
+            setTimeout(() => {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = (Math.random() * 10 + 5) + 'px';
+                confetti.style.height = (Math.random() * 10 + 5) + 'px';
+                confetti.style.opacity = Math.random() + 0.5;
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 4000);
+            }, i * 20);
+        }
+    }
+
+    // Add some sparkle on page load
+    setTimeout(() => {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.style.animation = 'slideUp 0.8s ease-out';
+            }, index * 200);
+        });
+    }, 100);
+</script>
+```
+
+</body>
+</html>
